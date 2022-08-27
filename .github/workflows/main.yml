@@ -17,8 +17,5 @@ jobs:
           scope: '@davidolu'
       - run: npm install
       - run: npm publish
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'

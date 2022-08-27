@@ -7,8 +7,9 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-    "prepare" : "npm run build",
+    "prepare" : "npm run build && npm run github-prebuild",
     "prepublishOnly" : "npm test && npm run lint",
+    "github-prebuild": "echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc",
     "preversion" : "npm run lint",
     "version" : "npm run format && git add -A src",
     "postversion" : "git push && git push --tags",
