@@ -15,8 +15,10 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@davidolu'
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
       - run: npm install
       - run: npm publish
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
