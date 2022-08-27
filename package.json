@@ -18,9 +18,6 @@
   "files": [
     "lib/**/*"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
-  },
   "keywords": ["Bashbop", "PayPal"],
   "author": "Segun Olumbe",
   "license": "ISC",
