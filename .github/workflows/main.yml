@@ -17,8 +17,6 @@ jobs:
           scope: '@davidolu'
       - run: npm install
       - run: npm run github-prebuild
-        env: 
-          NODE_AUTH_TOKEN: '${{ secrets.NODE_AUTH_TOKEN }}'
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: '${{ secrets.NODE_AUTH_TOKEN }}'
+          NPM_TOKEN: '${{ secrets.NODE_AUTH_TOKEN }}'
