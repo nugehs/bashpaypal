@@ -9,7 +9,7 @@
     "build": "tsc",
     "prepare" : "npm run build",
     "prepublishOnly" : "npm test && npm run lint",
-    "github-prebuild": "echo //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN} > /home/runner/work/_temp/.npmrc",
+    "github-prebuild": "echo //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN} > ~/.npmrc",
     "preversion" : "npm run lint",
     "version" : "npm run format && git add -A src",
     "postversion" : "git push && git push --tags",
