@@ -19,5 +19,4 @@ jobs:
       - run: npm run github-prebuild
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_auth_token}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
